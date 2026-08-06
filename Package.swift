@@ -15,18 +15,23 @@ let package = Package(
     products: [
         .library(
             name: "ZIPFoundation",
-            targets: ["ZIPFoundation_Aggregation"]
+            targets: ["ZIPFoundation_PrecompiledProduct"]
         )
     ],
     targets: [
         .target(
             name: "ZIPFoundation_Aggregation",
-            dependencies: ["ZIPFoundation"]
+            dependencies: ["ZIPFoundation"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "ZIPFoundation",
-            url: "https://github.com/swift-precompiled/ZIPFoundation/releases/download/main-22787ffb59de99e5dc1fbfe80b19c97a904ad48d/ZIPFoundation-d9c2d8461b5d320d306120565e2850e7f7f97083f00f3eb16ad081b912292342.xcframework.zip",
-            checksum: "d9c2d8461b5d320d306120565e2850e7f7f97083f00f3eb16ad081b912292342"
+            url: "https://github.com/swift-precompiled/ZIPFoundation/releases/download/main-22787ffb59de99e5dc1fbfe80b19c97a904ad48d/ZIPFoundation-ea46a8ed4c3b7b7da77620ec9ff34066d8d05378359b86ada048671453d71aaf.xcframework.zip",
+            checksum: "ea46a8ed4c3b7b7da77620ec9ff34066d8d05378359b86ada048671453d71aaf"
+        ),
+        .target(
+            name: "ZIPFoundation_PrecompiledProduct",
+            dependencies: ["ZIPFoundation_Aggregation"]
         )
     ]
 )
