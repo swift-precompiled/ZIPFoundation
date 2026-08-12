@@ -26,8 +26,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "ZIPFoundation",
-            url: "https://github.com/swift-precompiled/ZIPFoundation/releases/download/0.9.20/ZIPFoundation-93d403f371d42262eee7d3bdce4508a8c4d860e143e3ba6c7d96ff11cdcbcf4b.xcframework.zip",
-            checksum: "93d403f371d42262eee7d3bdce4508a8c4d860e143e3ba6c7d96ff11cdcbcf4b"
+            url: "https://github.com/swift-precompiled/ZIPFoundation/releases/download/0.9.20/ZIPFoundation-13ab1eeec5d8482b96e4d35aea5e61d02173cb4a42941e7497dd95636a9a236e.xcframework.zip",
+            checksum: "13ab1eeec5d8482b96e4d35aea5e61d02173cb4a42941e7497dd95636a9a236e"
         ),
         .target(
             name: "ZIPFoundation_PrecompiledProduct",
