@@ -22,16 +22,19 @@ let package = Package(
         .target(
             name: "ZIPFoundation_Aggregation",
             dependencies: ["ZIPFoundation"],
+            resources: [.copy("Resources/PrivacyInfo.xcprivacy")],
+            packageAccess: false,
             swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "ZIPFoundation",
-            url: "https://github.com/swift-precompiled/ZIPFoundation/releases/download/0.9.20/ZIPFoundation-1ac4e7321e92861d82b1449976aabbe30200e5550861f52d3e43971c89bfc1df.xcframework.zip",
-            checksum: "1ac4e7321e92861d82b1449976aabbe30200e5550861f52d3e43971c89bfc1df"
+            url: "https://github.com/swift-precompiled/ZIPFoundation/releases/download/0.9.20/ZIPFoundation-29ade35b9c05e719074a422982e544d1ca6d7bfd434e819932d85fd30a0da230.xcframework.zip",
+            checksum: "29ade35b9c05e719074a422982e544d1ca6d7bfd434e819932d85fd30a0da230"
         ),
         .target(
             name: "ZIPFoundation_PrecompiledProduct",
-            dependencies: ["ZIPFoundation_Aggregation"]
+            dependencies: ["ZIPFoundation_Aggregation"],
+            packageAccess: false
         )
     ]
 )
